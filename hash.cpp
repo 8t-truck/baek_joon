@@ -5,13 +5,12 @@ using namespace std;
 
 int main() {
 	int num;
-	string sum;
+	long long sum;
 	string str;
 	cin >> num>>str;
-	for (int i = 0; i < num; i++)//50Á¡ Â¥¸® ´ä¾ÈÁö
+	for (int i = 0; i < num; i++)//50ì  ì§œë¦¬ ë‹µì•ˆì§€,iê°€ 8ë§Œ ë„˜ì–´ë„ long longì— ì €ìž¥ì´ ì•ˆë¨
 	{
-		sum = to_string((str[i]-'a'+1) * pow(31, i));//¿©±â¼­ sumÀ¸·Î ¼ýÀÚ¸¦ ¸ø³Ñ±â´Â°Å´Ï±î ¹®ÀÚ·Î ³Ñ°Ü¾ßÇÒµí
-		cout << sum << endl;
+		sum += (str[i]-'a'+1) * pow(31, i);//ì—¬ê¸°ì„œ sumìœ¼ë¡œ ìˆ«ìžë¥¼ ëª»ë„˜ê¸°ëŠ”ê±°ë‹ˆê¹Œ ë¬¸ìžë¡œ ë„˜ê²¨ì•¼í• ë“¯
 	}
 	cout << sum;
 	return 0;
