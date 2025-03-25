@@ -14,14 +14,14 @@ int main()
 
 		for (int i = 0;; i++)
 		{
-			if (str.at(i) != str.at(end - i))//ÇÏ³ª¶óµµ ´Ù¸¦½Ã Å»Ãâ
+			if (str.at(i) != str.at(end - i))//í•˜ë‚˜ë¼ë„ ë‹¤ë¥¼ì‹œ íƒˆì¶œ
 			{
 				cout << "no";
 				break;
 			}
 			else
 				continue;
-			if (i > end - i)//±³Â÷½Ã Å»Ãâ
+			if (i > end - i)//êµì°¨ì‹œ íƒˆì¶œ
 			{
 				cout << "yes";
 				break;
