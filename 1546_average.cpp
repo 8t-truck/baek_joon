@@ -7,7 +7,7 @@ int main(void)
 	cin >> count;
 	for (int i = 0; i < count; i++)
 	{
-		cin >> arr[i];//float·Î ÀÔ·ÂÀ» ¹ÞÀ» °Å¾ß
+		cin >> arr[i];//floatÂ·ÃŽ Ã€Ã”Â·Ã‚Ã€Â» Â¹ÃžÃ€Â» Â°Ã…Â¾ÃŸ
 		if (arr[i] > max) max = arr[i];
 	}
 	for (int j = 0; j < count; j++)
