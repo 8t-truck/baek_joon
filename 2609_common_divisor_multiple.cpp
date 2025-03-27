@@ -12,9 +12,7 @@ void calculator(int n1, int n2)
 			n1 = n1 / i;
 			n2 = n2 / i;
 			grComDiv = grComDiv * i;
-			cout <<"i: " << i << endl;
-			cout <<"gC: " << grComDiv << endl;
-			i = 1;
+			i = 1;//i = 2라고 하면 반복문 돌면서 i++때문에 i = 3 으로 시작함;;
 		}
 	}
 
