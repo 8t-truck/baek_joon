@@ -25,7 +25,7 @@ int main(void)
 				if (max == 0)
 					break;
 			} while (target > max-1);
-		}//¹İº¹ÀÌ ¾Æ´Ñ %¸¦ ÀÌ¿ëÇÏ¿© Ç® ¼ö ÀÖÀ½!
+		}//ë°˜ë³µì´ ì•„ë‹Œ %ë¥¼ ì´ìš©í•˜ì—¬ í’€ ìˆ˜ ìˆìŒ!
 	}
 	cout << "<";
 	for (int i = 0; i < p.size(); i++)
@@ -42,4 +42,36 @@ int main(void)
 
 	return 0;
 }
+
+/*
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+
+    queue<int> q;
+    for (int i = 1; i <= n; ++i) {
+        q.push(i);
+    }
+
+    cout << "<";
+    while (!q.empty()) {
+        // k - 1ë²ˆ ì•ì—ì„œ ë¹¼ì„œ ë’¤ë¡œ ë³´ëƒ„
+        for (int i = 1; i < k; ++i) {
+            q.push(q.front());
+            q.pop();
+        }
+        // kë²ˆì§¸ ì‚¬ëŒ ì œê±°
+        cout << q.front();
+        q.pop();
+        if (!q.empty()) cout << ", ";
+    }
+    cout << ">\n";
+    return 0;
+}
+*/
+
 //B11866
