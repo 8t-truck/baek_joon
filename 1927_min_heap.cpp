@@ -1,6 +1,5 @@
 #include<iostream>
-#include<vector>
-#include<algorithm>
+#include<queue>
 using namespace std;
 //입력 받기 전부터 2^10의 배열을 만들고 입력받은 값을 true로 나머지를 false로 하면 어떨까?
 //0을 입력 받는 경우에만 sort()를 적용하는 경우
@@ -11,27 +10,25 @@ int main(void)
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	
-	int N, x;
-	vector<int> arr;
+	priority_queue<int, vector<int>, greater<int>>q;
+	int N;
 	cin >> N;
 	for (int i = 0; i < N; i++)
 	{
+		int x;
 		cin >> x;
-		if (x == 0 && arr.size() == 0)
-		{
+		if (x == 0 && q.size() == 0)
 			cout << 0 << '\n';
-		}
 		else if (x == 0)
 		{
-			sort(arr.begin(), arr.end());
-			cout << arr[0] << '\n';
-			arr.erase(arr.begin());
+			cout << q.top() << '\n';
+			q.pop();
 		}
 		else
 		{
-			arr.push_back(x);
+			q.push(x);
 		}
+
 	}
 	return 0;
 }
